@@ -19,9 +19,9 @@ request.allow('POST')
 
 field_names = {
     'name': 'Team Name',
-    'image': 'Image',
     'product_or_service': 'Product or Service',
     'homepage': 'Homepage',
+    'image': 'Image',
 }
 
 if user.ANON:
