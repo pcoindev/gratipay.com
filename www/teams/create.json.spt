@@ -60,11 +60,8 @@ if request.method == 'POST':
             raise Response(400, _("Please fill out the '{}' field.", field_names[field]))
         fields[field] = value
 
-#    for field in ('homepage'):
-#        if not any(map(fields['homepage'].lower().startswith, ('http://', 'https://'))):
-#            raise Response(400, _( "Please enter an http[s]:// URL for the '{}' field."
-#                                 , field_names[field]
-#                                  ))
+    if not any(map(fields['homepage'].lower().startswith, ('http://', 'https://'))):
+        raise Response(400, _("Please enter an http[s]:// URL for the 'Homepage' field."))
 
     try:
         fields['slug'] = slugize(fields['name'])
