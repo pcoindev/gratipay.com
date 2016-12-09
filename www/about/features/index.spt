@@ -17,8 +17,7 @@ individuals.</p>
     <a class="permalink" title="permalink" href="#receiving">&#182;</a>
 </h2>
 
-<p><a href="/new">Apply for a project profile</a> on Gratipay where you
-can receive money for your project.</p>
+<p><a href="/new">Apply for your project</a> to join Gratipay.</p>
 
 
 <h2 id="giving">How do I give money?
@@ -30,6 +29,8 @@ project you want to give to, and then look for the prompt. Here's <a
 href="/introtopython/">introtopython</a>, for example:</p>
 
 <div><a href="/introtopython/"><img src="giving-prompt-anon.png"></a></div>
+
+<p>Then once you sign in:</p>
 
 <div><a href="/introtopython/"><img src="giving-prompt-auth.png"></a></div>
 
@@ -78,7 +79,7 @@ dependent a project is on a few sources of income.</p>
 <p>Our minimum credit/debit card charge is $10. We <a
     href="https://medium.com/gratipay-blog/charging-in-arrears-18cacf779bee#.z92kxeqt6">charge
 in arrears</a>. For example, we'll charge $10 (+ fees) at the end of ten weeks
-for a $1/wk subscription. This may cause your project's receiving to <a
+for a $1/wk subscription. This may cause your project's income to <a
 href="#receiving-less">fluctuate</a>.</p>
 
 
@@ -97,8 +98,8 @@ href="#receiving-less">fluctuate</a>.</p>
 overly entitled to special treatment because they've given your project a
 little money.</p>
 
-<p>You <em>can</em> see overall statistics for your project under "Receiving"
-on your project page, including:</p>
+<p>You <em>can</em> see overall statistics for your project under
+&ldquo;Receiving&rdquo; on your project page, including:</p>
 
 <ul>
     <li>Funded Dues: incoming payments from givers who have not reached the <a href="#limits">charge threshold</a>, backed by working credit cards.</li>

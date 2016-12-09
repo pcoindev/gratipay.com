@@ -5,24 +5,25 @@ title = _("Welcome!")
 {% extends "templates/about-basic-info.html" %}
 {% block content %}
 
-<p>Welcome to Gratipay! We help companies pay for open source software.</p>
+<p>Welcome to Gratipay! We help companies pay open source projects.</p>
 
 <p>Does your company use open source software? Probably. Open source software
 is great! But if too few of us pay the projects that so many of us depend on,
-then we have a &ldquo;free rider&rdquo; problem. That's bad for all of us,
-because it's not sustainable. You can help by paying open source projects on
-Gratipay!</p>
+then we have [a free rider
+problem](http://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/).
+That's bad for all of us, because it's not sustainable. You can help by paying
+open source projects on Gratipay!</p>
 
 <p>Learn more about <a href="/about/features/">how payments work on
 Gratipay</a>.
 
 
-<h2 id="funding">How is Gratipay Funded?
+<h2 id="funding">How does Gratipay make money?
     <a class="permalink" title="permalink" href="#funding">&#182;</a>
 </h2>
 
-<p>Gratipay is <a href="/Gratipay/">funded on Gratipay</a>. We don't take a
-cut of payments (though we do pass through processing fees at cost). See
-our <a href="/about/pricing">pricing page</a> for more information.</p>
+<p>Gratipay makes money <a href="/Gratipay/">on Gratipay</a>. We don't take a
+cut of payments (though we do pass through processing fees at cost). See our <a
+href="/about/pricing">pricing page</a> for more information.</p>
 
 {% endblock %}
