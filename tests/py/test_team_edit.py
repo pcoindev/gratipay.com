@@ -241,7 +241,6 @@ class TestTeamEdit(Harness):
             'name': 'Enterprise',
             'product_or_service': 'We save galaxies.',
             'homepage': 'http://starwars-enterprise.com/',
-            'onboarding_url': 'http://starwars-enterprise.com/onboarding',
             'image': FileUpload(IMAGE, 'logo.png'),
         }
         data = json.loads(self.client.POST( '/enterprise/edit/edit.json'
@@ -255,7 +254,6 @@ class TestTeamEdit(Harness):
         assert team.name == 'Enterprise'
         assert team.product_or_service == 'We save galaxies.'
         assert team.homepage == 'http://starwars-enterprise.com/'
-        assert team.onboarding_url == 'http://starwars-enterprise.com/onboarding'
         assert team.load_image('original') == IMAGE
 
     def test_edit_supports_partial_updates(self):
@@ -274,7 +272,6 @@ class TestTeamEdit(Harness):
         assert team.name == 'The Enterprise'
         assert team.product_or_service == 'We save galaxies.'
         assert team.homepage == 'http://starwars-enterprise.com/'
-        assert team.onboarding_url == ''
         assert team.load_image('original') == IMAGE
 
     def test_edit_needs_auth(self):
@@ -336,12 +333,12 @@ class TestTeamEdit(Harness):
         assert T('enterprise').name == 'Enterprise'
 
     def test_can_only_edit_allowed_fields(self):
-        allowed_fields = set(['name', 'image', 'product_or_service',
-            'homepage', 'onboarding_url'])
+        allowed_fields = set(['name', 'image', 'product_or_service', 'homepage'])
 
         team = self.make_team(slug='enterprise', is_approved=None)
 
         fields = vars(team).keys()
+        fields.remove('onboarding_url')  # we are still keeping this in the db for now
         for field in fields:
             if field not in allowed_fields:
                 response = self.client.POST( '/enterprise/edit/edit.json'
@@ -407,7 +404,6 @@ class TestTeamEdit(Harness):
             'name': 'Enterprise',
             'product_or_service': 'We save galaxies.',
             'homepage': 'http://starwars-enterprise.com/',
-            'onboarding_url': 'http://starwars-enterprise.com/onboarding',
         }
         self.make_team(**team_data)
         r = self.client.POST( '/enterprise/edit/edit.json'
