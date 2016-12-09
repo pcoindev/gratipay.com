@@ -57,13 +57,6 @@ suppress_sidebar = True
     <p><i>{{ _("What is the customer-facing web page for your project?") }}</i></p>
     <input type="text" name="homepage" required>
 
-    <label><h2>{{ _("Self-onboarding Documentation URL") }}</h2></label>
-    <p><i>{{ _("Where can people find instructions on how to do your work for you ({0}example{1})? "
-              , '<a href="https://github.com/gratipay/gratipay.com/blob/master/CONTRIBUTING.md">'|safe
-              , '</a>'|safe
-                ) }}</i></p>
-    <input type="text" name="onboarding_url" required>
-
     <label><h2>{{ _("Image") }}</h2></label>
     <p><i>{{ _("PNG or JPG up to 256 kB. Will be cropped square and resized to 160 x 160 and 48 x 48 (with original saved for later).") }}</i></p>
     <input type="file" name="image" required>
